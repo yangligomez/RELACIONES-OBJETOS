@@ -1,0 +1,18 @@
+class Motor:
+    def __init__(self, tipo: str):
+        self.tipo = tipo
+
+    def encender(self):
+        return "El motor está encendido."
+
+class Coche:
+    def __init__(self, marca: str, tipo_motor: str):
+        self.marca = marca
+        self.motor = Motor(tipo_motor)
+
+    def encender_motor(self):
+        return f"{self.motor.encender()} El coche {self.marca} está listo para arrancar."
+
+# Ejemplo de uso
+mi_coche = Coche("Toyota", "V8")
+print(mi_coche.encender_motor())
