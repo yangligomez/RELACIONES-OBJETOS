@@ -1,0 +1,32 @@
+class Estudiante:
+    def __init__(self, nombre: str):
+        self.nombre = nombre
+
+class Clase:
+    def __init__(self, nombre: str):
+        self.nombre = nombre
+        self.estudiantes = []
+
+    def agregar_estudiante(self, estudiante: Estudiante):
+        self.estudiantes.append(estudiante)
+
+    def listar_estudiantes(self):
+        print(f"Clase: {self.nombre}")
+        for estudiante in self.estudiantes:
+            print(f"- {estudiante.nombre}")
+
+# Crear estudiantes
+estudiante1 = Estudiante("guiller")
+estudiante2 = Estudiante("yeison")
+estudiante3 = Estudiante("rosero")
+
+# Crear una clase
+clase = Clase("Matemáticas Discretas")
+
+# Agregar estudiantes a la clase
+clase.agregar_estudiante(estudiante1)
+clase.agregar_estudiante(estudiante2)
+clase.agregar_estudiante(estudiante3)
+
+# Listar estudiantes en la clase
+clase.listar_estudiantes()
